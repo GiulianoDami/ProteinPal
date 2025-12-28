@@ -18,16 +18,16 @@ class RecommendationController:
             raise ValueError("Invalid preference. Please choose 'plant', 'animal', or 'mixed'.")
 
     def _select_meals(self, foods, protein_goal):
-        # Simple logic to select meals. This can be improved with better algorithms.
-        meals = []
+        # Simple algorithm to select meals based on protein content
+        selected_meals = []
         current_protein = 0
 
-        for food in foods:
-            if current_protein + food['protein'] <= protein_goal:
-                meals.append(food['name'])
+        for food in sorted(foods, key=lambda x: x['protein'], reverse=True):
+            if current_protein < protein_goal:
+                selected_meals.append(food['name'])
                 current_protein += food['protein']
 
-        return meals
+        return selected_meals
 
 
 
@@ -37,9 +37,9 @@ food_data = [
     {'name': 'Vegan Chickpea Stew with Brown Rice', 'type': 'plant', 'protein': 35},
     {'name': 'Tofu Stir-Fry with Steamed Broccoli and Vegetables Rice Bowl', 'type': 'plant', 'protein': 30},
     {'name': 'Grilled Chicken Salad with Mixed Greens', 'type': 'animal', 'protein': 40},
-    {'name': 'Beef and Broccoli Stir-Fry', 'type': 'animal', 'protein': 50},
-    {'name': 'Turkey and Avocado Wrap', 'type': 'mixed', 'protein': 30},
-    {'name': 'Quinoa and Black Bean Tacos with Shredded Chicken', 'type': 'mixed', 'protein': 45}
+    {'name': 'Beef and Sweet Potato Stew', 'type': 'animal', 'protein': 50},
+    {'name': 'Turkey and Avocado Wrap', 'type': 'mixed', 'protein': 38},
+    {'name': 'Quinoa and Black Bean Chili', 'type': 'mixed', 'protein': 32}
 ]
 
 # Example usage
@@ -48,4 +48,6 @@ if __name__ == "__main__":
     protein_goal = 150
     preference = 'plant'
     recommendations = controller.get_recommendations(protein_goal, preference)
-    print("Recommended meals:", recommendations)
+    print("Recommended meals:")
+    for meal in recommendations:
+        print(meal)
