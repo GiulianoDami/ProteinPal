@@ -2,48 +2,52 @@
   "foods": [
     {
       "name": "Lentil Soup with Spinach and Quinoa Salad",
+      "type": "plant",
       "protein": 20,
-      "type": "plant"
+      "calories": 350,
+      "ingredients": ["lentils", "spinach", "quinoa", "onion", "carrot", "celery", "vegetable broth", "olive oil", "lime juice", "cumin"]
     },
     {
       "name": "Vegan Chickpea Stew with Brown Rice",
+      "type": "plant",
       "protein": 18,
-      "type": "plant"
+      "calories": 400,
+      "ingredients": ["chickpeas", "tomatoes", "potatoes", "onions", "garlic", "vegetable broth", "cumin", "coriander", "brown rice"]
     },
     {
       "name": "Tofu Stir-Fry with Steamed Broccoli and Vegetables Rice Bowl",
+      "type": "plant",
       "protein": 22,
-      "type": "plant"
+      "calories": 450,
+      "ingredients": ["tofu", "broccoli", "bell peppers", "snap peas", "ginger", "soy sauce", "sesame oil", "brown rice"]
     },
     {
-      "name": "Grilled Chicken Salad with Mixed Greens",
+      "name": "Grilled Chicken Salad with Mixed Greens and Avocado",
+      "type": "animal",
       "protein": 30,
-      "type": "animal"
+      "calories": 300,
+      "ingredients": ["chicken breast", "mixed greens", "avocado", "tomato", "cucumber", "feta cheese", "olive oil", "lemon juice"]
     },
     {
-      "name": "Beef and Broccoli Stir-Fry",
+      "name": "Beef and Sweet Potato Stew",
+      "type": "animal",
       "protein": 25,
-      "type": "animal"
+      "calories": 500,
+      "ingredients": ["beef chuck", "sweet potatoes", "carrots", "onions", "garlic", "beef broth", "thyme", "rosemary", "salt", "pepper"]
     },
     {
-      "name": "Turkey and Avocado Wrap",
+      "name": "Turkey and Cheese Wrap",
+      "type": "animal",
       "protein": 28,
-      "type": "mixed"
+      "calories": 350,
+      "ingredients": ["turkey breast", "cheddar cheese", "whole wheat wrap", "lettuce", "tomato", "mayonnaise"]
     },
     {
-      "name": "Mixed Bean Chili with Sweet Potato",
-      "protein": 19,
-      "type": "plant"
-    },
-    {
-      "name": "Salmon with Asparagus and Quinoa",
-      "protein": 34,
-      "type": "animal"
-    },
-    {
-      "name": "Egg and Cheese Omelette with Spinach",
-      "protein": 26,
-      "type": "mixed"
+      "name": "Mixed Grill with Grilled Vegetables",
+      "type": "mixed",
+      "protein": 35,
+      "calories": 600,
+      "ingredients": ["chicken breast", "tofu", "zucchini", "eggplant", "onion", "garlic", "olive oil", "lemon juice", "oregano"]
     }
   ]
 }
