@@ -1,0 +1,49 @@
+{
+  "foods": [
+    {
+      "name": "Lentil Soup with Spinach and Quinoa Salad",
+      "protein": 20,
+      "type": "plant"
+    },
+    {
+      "name": "Vegan Chickpea Stew with Brown Rice",
+      "protein": 18,
+      "type": "plant"
+    },
+    {
+      "name": "Tofu Stir-Fry with Steamed Broccoli and Vegetables Rice Bowl",
+      "protein": 22,
+      "type": "plant"
+    },
+    {
+      "name": "Grilled Chicken Salad with Mixed Greens",
+      "protein": 30,
+      "type": "animal"
+    },
+    {
+      "name": "Beef and Broccoli Stir-Fry",
+      "protein": 25,
+      "type": "animal"
+    },
+    {
+      "name": "Turkey and Avocado Wrap",
+      "protein": 28,
+      "type": "mixed"
+    },
+    {
+      "name": "Mixed Bean Chili with Sweet Potato",
+      "protein": 19,
+      "type": "plant"
+    },
+    {
+      "name": "Salmon with Asparagus and Quinoa",
+      "protein": 34,
+      "type": "animal"
+    },
+    {
+      "name": "Egg and Cheese Omelette with Spinach",
+      "protein": 26,
+      "type": "mixed"
+    }
+  ]
+}
