@@ -22,7 +22,8 @@ h1 {
     color: #333;
 }
 
-input[type="number"], input[type="text"] {
+input[type="number"],
+input[type="text"] {
     width: calc(100% - 22px);
     padding: 10px;
     margin: 10px 0;
@@ -31,7 +32,7 @@ input[type="number"], input[type="text"] {
 }
 
 button {
-    background-color: #007bff;
+    background-color: #28a745;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -41,7 +42,7 @@ button {
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #218838;
 }
 
 ul {
