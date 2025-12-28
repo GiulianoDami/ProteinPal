@@ -1,28 +1,28 @@
-# settings.py
+# Configuration settings for ProteinPal
 
 # Default protein sources
 PROTEIN_SOURCES = {
-    'plant': ['lentils', 'chickpeas', 'tofu', 'spinach', 'quinoa'],
+    'plant': ['lentils', 'chickpeas', 'tofu', 'spinach', 'broccoli'],
     'animal': ['chicken', 'beef', 'salmon', 'eggs', 'milk'],
-    'mixed': ['lentils', 'chickpeas', 'tofu', 'spinach', 'quinoa', 'chicken', 'beef', 'salmon', 'eggs', 'milk']
+    'mixed': ['lentils', 'chicken', 'tofu', 'salmon', 'spinach']
 }
 
-# Default meal suggestions
-MEAL_SUGGESTIONS = {
+# Default meal ideas
+MEAL_IDEAS = {
     'plant': [
         'Lentil Soup with Spinach and Quinoa Salad',
         'Vegan Chickpea Stew with Brown Rice',
         'Tofu Stir-Fry with Steamed Broccoli and Vegetables Rice Bowl'
     ],
     'animal': [
-        'Grilled Chicken Salad with Mixed Greens and Avocado',
-        'Beef and Broccoli Stir-Fry',
-        'Smoked Salmon with Quinoa Pilaf'
+        'Grilled Chicken Salad with Mixed Greens and Cherry Tomatoes',
+        'Beef and Vegetable Stir-Fry with Brown Rice',
+        'Smoked Salmon and Avocado Toast'
     ],
     'mixed': [
-        'Chicken and Lentil Curry',
-        'Beef and Spinach Lasagna',
-        'Salmon and Tofu Teriyaki Bowl'
+        'Chicken and Lentil Curry with Quinoa',
+        'Beef and Chickpea Stew with Brown Rice',
+        'Tofu and Salmon Stir-Fry with Mixed Vegetables'
     ]
 }
 
@@ -32,7 +32,7 @@ NUTRITIONAL_VALUES = {
     'chickpeas': {'protein': 19},
     'tofu': {'protein': 8},
     'spinach': {'protein': 2.9},
-    'quinoa': {'protein': 14},
+    'broccoli': {'protein': 2.8},
     'chicken': {'protein': 31},
     'beef': {'protein': 26},
     'salmon': {'protein': 20},
