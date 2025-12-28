@@ -1,4 +1,4 @@
-def get_protein_target():
+def get_protein_goal():
     return int(input("Welcome to ProteinPal!\nPlease enter your daily protein target (in grams): "))
 
 def get_dietary_preference():
@@ -8,35 +8,43 @@ def get_dietary_preference():
         preference = input("Do you prefer plant-based, animal-based, or mixed meals? (Enter plant/animal/mixed): ").strip().lower()
     return preference
 
-def suggest_meals(protein_target, dietary_preference):
+def suggest_meals(protein_goal, dietary_preference):
     # Basic dataset of foods with known nutritional values
     foods = {
-        'lentil soup with spinach and quinoa salad': {'protein': 20, 'type': 'plant'},
-        'vegan chickpea stew with brown rice': {'protein': 18, 'type': 'plant'},
-        'tofu stir-fry with steamed broccoli and vegetables rice bowl': {'protein': 25, 'type': 'plant'},
-        'grilled chicken breast with roasted vegetables': {'protein': 30, 'type': 'animal'},
-        'baked salmon with quinoa and asparagus': {'protein': 24, 'type': 'animal'},
-        'chicken and vegetable stir-fry': {'protein': 22, 'type': 'mixed'},
-        'beef and broccoli bowl': {'protein': 26, 'type': 'mixed'}
+        'plant': [
+            {'name': 'Lentil Soup with Spinach and Quinoa Salad', 'protein': 25},
+            {'name': 'Vegan Chickpea Stew with Brown Rice', 'protein': 30},
+            {'name': 'Tofu Stir-Fry with Steamed Broccoli and Vegetables Rice Bowl', 'protein': 28}
+        ],
+        'animal': [
+            {'name': 'Grilled Chicken Salad with Mixed Greens', 'protein': 35},
+            {'name': 'Beef and Broccoli Stir-Fry', 'protein': 40},
+            {'name': 'Shrimp and Vegetable Stir-Fry', 'protein': 38}
+        ],
+        'mixed': [
+            {'name': 'Chicken and Quinoa Bowl with Roasted Vegetables', 'protein': 32},
+            {'name': 'Turkey and Avocado Wrap', 'protein': 27},
+            {'name': 'Fish and Bean Chili', 'protein': 36}
+        ]
     }
 
-    meal_options = []
-    for food, details in foods.items():
-        if details['type'] == dietary_preference or dietary_preference == 'mixed':
-            meal_options.append(food)
+    meal_options = foods[dietary_preference]
+    suggested_meals = []
 
-    # Filter meals based on protein content
-    recommended_meals = [meal for meal in meal_options if foods[meal]['protein'] >= protein_target / 3]
+    for meal in meal_options:
+        if meal['protein'] >= protein_goal / 3:  # Assuming 3 meals a day
+            suggested_meals.append(meal['name'])
 
-    if not recommended_meals:
-        return "No meal options match your criteria. Consider adjusting your protein target or dietary preference."
-
-    return "\nHere are your meal options:\n" + "\n".join(f"{i+1}. {meal}" for i, meal in enumerate(recommended_meals))
+    return suggested_meals
 
 def main():
-    protein_target = get_protein_target()
+    protein_goal = get_protein_goal()
     dietary_preference = get_dietary_preference()
-    print(suggest_meals(protein_target, dietary_preference))
+    meal_options = suggest_meals(protein_goal, dietary_preference)
+
+    print("\nHere are your meal options:")
+    for i, meal in enumerate(meal_options, 1):
+        print(f"{i}. {meal}")
 
 if __name__ == "__main__":
     main()
